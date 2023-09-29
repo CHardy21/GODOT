@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://recursos/Items/bronze_1.png" type="Texture" id=1]
+[ext_resource path="res://recursos/Items/silver_2.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Items/bronze_3.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Items/silver_4.png" type="Texture" id=4]
+[ext_resource path="res://recursos/Items/gold_1.png" type="Texture" id=5]
+[ext_resource path="res://recursos/Items/gold_2.png" type="Texture" id=6]
+[ext_resource path="res://recursos/Items/gold_4.png" type="Texture" id=7]
+[ext_resource path="res://recursos/Items/bronze_2.png" type="Texture" id=8]
+[ext_resource path="res://recursos/Items/bronze_4.png" type="Texture" id=9]
+[ext_resource path="res://recursos/Items/silver_1.png" type="Texture" id=10]
+[ext_resource path="res://recursos/Items/silver_3.png" type="Texture" id=11]
+[ext_resource path="res://recursos/Items/gold_3.png" type="Texture" id=12]
+[ext_resource path="res://juego/objetos/MonedaBase.gd" type="Script" id=13]
+[ext_resource path="res://recursos/Sfx/Moneda_Comun.wav" type="AudioStream" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "girar_plata",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "girar_oro",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "girar_bronce",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 45.3537
+
+[sub_resource type="Animation" id=3]
+resource_name = "consumir"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.05, 0.05 ) ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("consumir")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="MonedaBase" type="Area2D"]
+scale = Vector2( 0.35, 0.35 )
+z_index = 35
+z_as_relative = false
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "girar_oro"
+
+[node name="ColisionPersonaje" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )
+
+[node name="consumir" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+bus = "SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/consumir = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

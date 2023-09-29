@@ -1,0 +1,181 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://juego/enemigos/Sierrin.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Enemies/spikeBall1.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Enemies/spikeBall_2.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Sfx/volon_morir.wav" type="AudioStream" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "caminar",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.0618, 2.20913 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 27.5473
+
+[sub_resource type="Animation" id=4]
+resource_name = "morir"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -20 ), Vector2( 0, 300 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("SfxMorir")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 4 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=5]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.400442, 0.499444, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 4, 3, 2, 1, 0, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -20 ), Vector2( 0, -120 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DetectorJugador:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.315002, 9.44939 ), Vector2( -0.315, -105 ), Vector2( -0.315, -103 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("DetectorPisoton/Colisionador:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.629967, -45.9871 ), Vector2( -0.63, -165 ), Vector2( -0.63, -165 ), Vector2( -0.629967, -45.9871 ) ]
+}
+
+[node name="Sierrin" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+scale = Vector2( 0.65, 0.65 )
+z_index = 35
+z_as_relative = false
+collision_layer = 8
+collision_mask = 68
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.705882, 0.207843, 0.109804, 1 )
+position = Vector2( 0, -20 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "caminar"
+playing = true
+
+[node name="ColisionPies" type="CollisionShape2D" parent="."]
+position = Vector2( 0.250839, 15.7322 )
+shape = SubResource( 2 )
+
+[node name="DetectorVacio" type="RayCast2D" parent="."]
+modulate = Color( 0.0235294, 0.0235294, 0.0235294, 1 )
+position = Vector2( 35.7491, -16.6457 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+collision_mask = 4
+
+[node name="DetectorPared" type="RayCast2D" parent="."]
+modulate = Color( 0.811765, 0.956863, 0.0235294, 1 )
+position = Vector2( 23.378, -18.7009 )
+enabled = true
+cast_to = Vector2( 20, 0 )
+collision_mask = 4
+
+[node name="DetectaJugador" type="Area2D" parent="."]
+position = Vector2( 0, 34.7085 )
+collision_layer = 40
+collision_mask = 66
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectaJugador"]
+position = Vector2( 0.250839, -53.4127 )
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/morir = SubResource( 4 )
+anims/volar = SubResource( 5 )
+
+[node name="SfxMorir" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+[connection signal="area_entered" from="DetectaJugador" to="." method="_on_area_entered"]
+[connection signal="body_entered" from="DetectaJugador" to="." method="_on_DetectaJugador_body_entered"]

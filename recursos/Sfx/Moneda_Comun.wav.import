@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Moneda_Comun.wav-29f25b2888edfb009526a4f79bfbf313.sample"
+
+[deps]
+
+source_file="res://recursos/Sfx/Moneda_Comun.wav"
+dest_files=[ "res://.import/Moneda_Comun.wav-29f25b2888edfb009526a4f79bfbf313.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

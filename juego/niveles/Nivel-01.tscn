@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=4]
+
+[node name="Nivel-01" instance=ExtResource( 1 )]
+nivel_actual = "res://juego/niveles/Nivel-01.tscn"
+
+[node name="PlataformaCesped" parent="Plataformas/PlataformasLargas" index="0" instance=ExtResource( 2 )]
+position = Vector2( 626.292, 566.36 )
+scale = Vector2( 2, 0.3 )
+
+[node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 4 )]
+position = Vector2( 920.391, 512.288 )
+
+[node name="Rayos" parent="." index="7"]
+position = Vector2( 797.099, 524.407 )
+
+[node name="PersonajePpal" parent="." index="8" instance=ExtResource( 3 )]
+position = Vector2( 523.769, 553.399 )
+
+[node name="Portal" parent="." index="9"]
+position = Vector2( 391.918, 503.695 )
+proximo_nivel = "res://juego/niveles/Nivel-02.tscn"

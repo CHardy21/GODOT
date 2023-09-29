@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://juego/menu/MenuPausa.gd" type="Script" id=1]
+[ext_resource path="res://juego/menu/botones/BotonSalir.gd" type="Script" id=2]
+[ext_resource path="res://juego/menu/botones/BotonMenu.tscn" type="PackedScene" id=3]
+
+[node name="MenuPausa" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+menu_principal = "res://juego/menu/MenuPrincipal.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -5.61224
+margin_top = 2.2449
+margin_right = -5.6123
+margin_bottom = 2.24487
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0.0313726, 0.972549, 0.972549, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_top = -201.5
+margin_right = 196.0
+margin_bottom = 201.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.5
+margin_top = -124.5
+margin_right = 111.5
+margin_bottom = 124.5
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonContinuar" parent="Panel/VBoxContainer" instance=ExtResource( 3 )]
+text = "Continuar... "
+
+[node name="BotonMenuPrincipal" parent="Panel/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 81.0
+margin_bottom = 152.0
+text = "Menu Principal"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+margin_top = 162.0
+margin_right = 223.0
+margin_bottom = 166.0
+
+[node name="BotonSalir" parent="Panel/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 176.0
+margin_bottom = 249.0
+text = "Salir"
+script = ExtResource( 2 )
+[connection signal="pressed" from="Panel/VBoxContainer/BotonContinuar" to="." method="_on_BotonContinuar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/BotonSalir" to="Panel/VBoxContainer/BotonSalir" method="_on_BotonSalir_pressed"]

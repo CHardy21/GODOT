@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boom-geomorphism-cinematic-trailer-sound-effects-123876.wav-5eaa1c0aeaf8740976495d4d9e8839c6.sample"
+
+[deps]
+
+source_file="res://recursos/Musicas/boom-geomorphism-cinematic-trailer-sound-effects-123876.wav"
+dest_files=[ "res://.import/boom-geomorphism-cinematic-trailer-sound-effects-123876.wav-5eaa1c0aeaf8740976495d4d9e8839c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

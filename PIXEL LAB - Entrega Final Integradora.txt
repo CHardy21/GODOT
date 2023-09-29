@@ -1,0 +1,25 @@
+PIXEL LAB - Entrega Final Integrador
+Nombre y Apellido: 			CHRISTIAN R. HARDY
+Nombre del Juego:			SALTARINA
+Mecanica Intermedia seleccionada (una): SIERRIN
+Mecanica Avanzada seleccionada (una): 	DISPARO
+
+Contanos en pocas palabras como pensaste la imeplentacion de las nuevas mecanicas
+Observaciones sobre la implementacion de la mecanica Intermedia:
+===============================================================
+Tomando como punto de partida el enemigo "pinchon" hecho en clases, le hice algunos cambios:
+ * se agrego una variable (export radio_mov_x) para controlar la amplitud del movimiento horizontal de sierrin.
+ * la variable radio_mov_x determina el radio de movimiento horizontal del enemigo (a futuro sera reemplazada por otra q fije solamente
+   la amplitud del movimiento, y otra adicional para darle direccion al movimiento al inicio, a los efectos dar mayor control durante
+   el diseño del game)
+ * Esta variable"radio_mov_x" si es igual a "0" significa que no hay limites para moverese, osea el enemigo funcionaria tal como lo que
+   se hiso en clases, cambiando su direccion al detectar vacio unicamente)
+ * Si la variable tiene algun valor, el enemigo se movera solamente dentro de su radio de movimiento, o sea al llegar al limite cambia
+   de direccion, lo cual se hizo agragando una nueva condicion a la funcion de deteccion de colicion ("detectar_colision()") que 
+   verificaria, a traves de la func limite_de_movimiento, si sierrin se encuentra dentro de su radio de movimiento horizontal. 
+ * Se le agrego una señal que detecta la colision con un proyectil (Area2D) lanzado por el player, y de inmediato se llama a la funcion
+   que desactiva colicionadores de sierrin y luego llama a su funcion morir() q reproduce la animacion de morir, similar a la de volon 
+   hecho en clases, y terminada esta e elimina el nodo.
+
+Observaciones sobre la implementacion de la mecanica Intermedia:
+===============================================================

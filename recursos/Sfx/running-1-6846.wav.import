@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/running-1-6846.wav-a828530ba8f7d71c748fe1d06bed29a6.sample"
+
+[deps]
+
+source_file="res://recursos/Sfx/running-1-6846.wav"
+dest_files=[ "res://.import/running-1-6846.wav-a828530ba8f7d71c748fe1d06bed29a6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/nubon_disparo.wav-de31abecf1b816c8f38d4f3e46e18bb7.sample"
+
+[deps]
+
+source_file="res://recursos/Sfx/nubon_disparo.wav"
+dest_files=[ "res://.import/nubon_disparo.wav-de31abecf1b816c8f38d4f3e46e18bb7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
