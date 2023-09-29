@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=13]
 [ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=14]
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=15]
-[ext_resource path="res://juego/objetos/MonedaBase.gd" type="Script" id=16]
 [ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=17]
 
 [node name="Nivel-05" instance=ExtResource( 1 )]
@@ -112,15 +111,8 @@ position = Vector2( 389.884, -121.289 )
 [node name="ZanahoriaLlave3" parent="Zanahorias" index="3" instance=ExtResource( 8 )]
 position = Vector2( -472.786, -25.1228 )
 
-[node name="MonedaOro" type="Area2D" parent="Monedas" index="0" instance=ExtResource( 9 )]
+[node name="MonedaOro" parent="Monedas" index="0" instance=ExtResource( 9 )]
 position = Vector2( -153.663, 39.6244 )
-scale = Vector2( 0.35, 0.35 )
-z_index = 35
-z_as_relative = false
-collision_layer = 16
-collision_mask = 2
-script = ExtResource( 16 )
-tipo_moneda = "oro"
 
 [node name="MonedaOro2" parent="Monedas" index="1" instance=ExtResource( 9 )]
 position = Vector2( 1635.39, 276.591 )
@@ -137,25 +129,11 @@ position = Vector2( 1774.69, 398.533 )
 [node name="MonedaOro5" parent="Monedas" index="5" instance=ExtResource( 9 )]
 position = Vector2( 1742.34, 287.943 )
 
-[node name="MonedaPlata" type="Area2D" parent="Monedas" index="6" instance=ExtResource( 13 )]
+[node name="MonedaPlata" parent="Monedas" index="6" instance=ExtResource( 13 )]
 position = Vector2( 791.004, 482.19 )
-scale = Vector2( 0.35, 0.35 )
-z_index = 35
-z_as_relative = false
-collision_layer = 16
-collision_mask = 2
-script = ExtResource( 16 )
-tipo_moneda = "plata"
 
-[node name="MonedaBronce" type="Area2D" parent="Monedas" index="7" instance=ExtResource( 14 )]
+[node name="MonedaBronce" parent="Monedas" index="7" instance=ExtResource( 14 )]
 position = Vector2( 1201.82, 402.363 )
-scale = Vector2( 0.35, 0.35 )
-z_index = 35
-z_as_relative = false
-collision_layer = 16
-collision_mask = 2
-script = ExtResource( 16 )
-tipo_moneda = "bronce"
 
 [node name="MonedaBronce2" parent="Monedas" index="8" instance=ExtResource( 14 )]
 position = Vector2( 1071.71, 464.275 )
@@ -177,6 +155,3 @@ texture = ExtResource( 7 )
 
 [node name="PlataformaImpulsora" parent="." index="11" instance=ExtResource( 15 )]
 position = Vector2( 1764.78, 534.557 )
-[connection signal="body_entered" from="Monedas/MonedaOro" to="Monedas/MonedaOro" method="_on_body_entered"]
-[connection signal="body_entered" from="Monedas/MonedaPlata" to="Monedas/MonedaPlata" method="_on_body_entered"]
-[connection signal="body_entered" from="Monedas/MonedaBronce" to="Monedas/MonedaBronce" method="_on_body_entered"]
