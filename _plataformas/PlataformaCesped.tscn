@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://juego/plataformas/Plataforma.tscn" type="PackedScene" id=1]
+
+[node name="PlataformaCesped" instance=ExtResource( 1 )]
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( -156.706, -46.3642, 177.461, -45.7696, 190.381, -45.1093, 188.164, -36.8505, 189.947, -30.9045, 189.947, -16.0394, 163.19, 29.7451, 157.839, 34.5019, 154.271, 35.0965, -159.679, 46.9886, -163.247, 45.7994, -189.41, -13.661, -190.004, -33.2829, -191.27, -45.6343, -177.518, -45.7696 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://juego/plataformas/PlataformaArena.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/plataformas/PlataformaMadera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=5]
@@ -35,7 +35,10 @@ scale = Vector2( 0.8, 0.3 )
 position = Vector2( 273.903, 601.298 )
 scale = Vector2( 0.8, 0.3 )
 
-[node name="PlataformaCortaArena4" parent="Plataformas/PlataformasCortas" index="3" instance=ExtResource( 2 )]
+[node name="PlataformaCortaArena6" parent="Plataformas/PlataformasCortas" index="3" instance=ExtResource( 2 )]
+position = Vector2( 524.195, 553.549 )
+
+[node name="PlataformaCortaArena4" parent="Plataformas/PlataformasCortas" index="4" instance=ExtResource( 2 )]
 position = Vector2( 2885.54, 54.9196 )
 scale = Vector2( 0.8, 0.3 )
 
@@ -48,63 +51,59 @@ position = Vector2( 1422.96, 604.313 )
 scale = Vector2( 2.5, 0.4 )
 
 [node name="PlataformaLargaNieve" parent="Plataformas/PlataformasLargas" index="1" instance=ExtResource( 13 )]
-position = Vector2( 2569.33, -428.109 )
-scale = Vector2( 2.5, 0.4 )
+position = Vector2( 2582.33, -428.109 )
+scale = Vector2( 2.6, 0.4 )
 
 [node name="PlataformaLargaNieve2" parent="Plataformas/PlataformasLargas" index="2" instance=ExtResource( 13 )]
 position = Vector2( 976.405, -239.239 )
 scale = Vector2( 2.5, 0.4 )
 
-[node name="PlataformaTrampa" parent="Plataformas" index="4" instance=ExtResource( 8 )]
-position = Vector2( 519.732, 558.959 )
-scale = Vector2( 0.6, 0.45 )
-
-[node name="PlataformaTrampa2" parent="Plataformas" index="5" instance=ExtResource( 8 )]
+[node name="PlataformaTrampa2" parent="Plataformas" index="4" instance=ExtResource( 8 )]
 position = Vector2( 838.201, 549.224 )
 scale = Vector2( 0.8, 0.45 )
 
-[node name="PlataformaTrampa3" parent="Plataformas" index="6" instance=ExtResource( 8 )]
+[node name="PlataformaTrampa3" parent="Plataformas" index="5" instance=ExtResource( 8 )]
 position = Vector2( 2261.14, 527.867 )
 scale = Vector2( 0.8, 0.45 )
 
-[node name="PlataformaTrampa4" parent="Plataformas" index="7" instance=ExtResource( 8 )]
+[node name="PlataformaTrampa4" parent="Plataformas" index="6" instance=ExtResource( 8 )]
 position = Vector2( 1972.97, -484.98 )
 scale = Vector2( 0.8, 0.45 )
 
-[node name="PlataformaTrampa5" parent="Plataformas" index="8" instance=ExtResource( 8 )]
+[node name="PlataformaTrampa5" parent="Plataformas" index="7" instance=ExtResource( 8 )]
 position = Vector2( 1752.6, -484.98 )
 scale = Vector2( 0.8, 0.45 )
 
-[node name="PlataformaTrampa6" parent="Plataformas" index="9" instance=ExtResource( 8 )]
-position = Vector2( 1528.47, -394.029 )
-scale = Vector2( 0.8, 0.45 )
-
-[node name="PlataformaImpulsora" parent="Plataformas" index="10" instance=ExtResource( 6 )]
+[node name="PlataformaImpulsora" parent="Plataformas" index="8" instance=ExtResource( 6 )]
 position = Vector2( 2523.03, 463.267 )
 
-[node name="PlataformaImpulsora3" parent="Plataformas" index="11" instance=ExtResource( 6 )]
-position = Vector2( 3122.36, -232.527 )
+[node name="PlataformaImpulsora3" parent="Plataformas" index="9" instance=ExtResource( 6 )]
+position = Vector2( 3122.36, -256.891 )
 
-[node name="PlataformaImpulsora2" parent="Plataformas" index="12" instance=ExtResource( 6 )]
-position = Vector2( 2664.52, 189.621 )
+[node name="PlataformaImpulsora2" parent="Plataformas" index="10" instance=ExtResource( 6 )]
+position = Vector2( 2657.52, 189.621 )
 
-[node name="PlataformaPiedra2" parent="Plataformas" index="13" instance=ExtResource( 15 )]
+[node name="PlataformaPiedra2" parent="Plataformas" index="11" instance=ExtResource( 15 )]
 position = Vector2( 3022.96, -12.9318 )
 
-[node name="PlataformaPiedra3" parent="Plataformas" index="14" instance=ExtResource( 15 )]
+[node name="PlataformaPiedra3" parent="Plataformas" index="12" instance=ExtResource( 15 )]
 position = Vector2( 3135.64, -70.1127 )
 
-[node name="PlataformaPiedra4" parent="Plataformas" index="15" instance=ExtResource( 15 )]
-position = Vector2( 3244.96, -125.612 )
+[node name="PlataformaPiedra4" parent="Plataformas" index="13" instance=ExtResource( 15 )]
+position = Vector2( 3244.96, -160.612 )
 
-[node name="PlataformaPiedra6" parent="Plataformas" index="16" instance=ExtResource( 15 )]
+[node name="PlataformaPiedra7" parent="Plataformas" index="14" instance=ExtResource( 15 )]
+position = Vector2( 1543.76, -392.543 )
+scale = Vector2( 0.5, 0.3 )
+
+[node name="PlataformaPiedra6" parent="Plataformas" index="15" instance=ExtResource( 15 )]
 position = Vector2( 2888.02, -478.065 )
 
-[node name="PlataformaPiedra5" parent="Plataformas" index="17" instance=ExtResource( 15 )]
-position = Vector2( 3125.55, -219.792 )
+[node name="PlataformaPiedra5" parent="Plataformas" index="16" instance=ExtResource( 15 )]
+position = Vector2( 3125.55, -243.792 )
 
 [node name="Volon" parent="Enemigos" index="0" instance=ExtResource( 3 )]
-position = Vector2( 672.355, 607.252 )
+position = Vector2( 673.355, 601.252 )
 
 [node name="Volon2" parent="Enemigos" index="1" instance=ExtResource( 3 )]
 position = Vector2( 1996.86, 661.13 )
@@ -144,7 +143,7 @@ position = Vector2( 1347.4, 587.901 )
 position = Vector2( 1127.9, -333.906 )
 
 [node name="ZanahoriaLlave2" parent="Zanahorias" index="1" instance=ExtResource( 12 )]
-position = Vector2( 2673.98, 403.04 )
+position = Vector2( 2647.15, 51.6416 )
 
 [node name="ZanahoriaLlave3" parent="Zanahorias" index="2" instance=ExtResource( 12 )]
 position = Vector2( 2889.55, -648.257 )
@@ -168,7 +167,7 @@ position = Vector2( 2109.65, -589.301 )
 position = Vector2( 1872.56, -587.714 )
 
 [node name="MonedaOro9" parent="Monedas" index="6" instance=ExtResource( 5 )]
-position = Vector2( 2663.09, 79.5581 )
+position = Vector2( 2679.09, 403.558 )
 
 [node name="MonedaOro6" parent="Monedas" index="7" instance=ExtResource( 5 )]
 position = Vector2( 1411.91, -552.272 )

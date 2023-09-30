@@ -159,12 +159,12 @@ position = Vector2( 2563.52, 172.947 )
 [node name="Rayos" parent="." index="7"]
 position = Vector2( 0, 94 )
 
-[node name="PersonajePpal" parent="." index="8" instance=ExtResource( 4 )]
+[node name="PlataformaImpulsora-2" parent="." index="8" instance=ExtResource( 10 )]
+position = Vector2( 3261.34, 153.766 )
+
+[node name="PersonajePpal" parent="." index="9" instance=ExtResource( 4 )]
 position = Vector2( 302.35, 653.292 )
 
-[node name="Portal" parent="." index="9"]
+[node name="Portal" parent="." index="10"]
 position = Vector2( 283.67, 126.573 )
 proximo_nivel = "res://juego/niveles/Nivel-05.tscn"
-
-[node name="PlataformaImpulsora-2" parent="." index="10" instance=ExtResource( 10 )]
-position = Vector2( 3261.34, 153.766 )

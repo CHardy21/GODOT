@@ -91,12 +91,12 @@ position = Vector2( 2136.55, 435.332 )
 [node name="MonedaBronce" parent="Monedas" index="7" instance=ExtResource( 9 )]
 position = Vector2( 1441.32, 434.221 )
 
-[node name="PersonajePpal" parent="." index="8" instance=ExtResource( 4 )]
+[node name="PlataformaImpulsora" parent="." index="8" instance=ExtResource( 10 )]
+position = Vector2( 1782.73, 474.253 )
+
+[node name="PersonajePpal" parent="." index="9" instance=ExtResource( 4 )]
 position = Vector2( 423.926, 562.407 )
 
-[node name="Portal" parent="." index="9"]
+[node name="Portal" parent="." index="10"]
 position = Vector2( 1223.43, 83.9236 )
 proximo_nivel = "res://juego/niveles/Nivel-04.tscn"
-
-[node name="PlataformaImpulsora" parent="." index="10" instance=ExtResource( 10 )]
-position = Vector2( 1782.73, 474.253 )

@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Proyecto Inicial J"
+config/name="TFI-informatoria-PixelLab"
 run/main_scene="res://juego/menu/MenuPrincipal.tscn"
 config/icon="res://icon.png"
 
@@ -81,4 +81,3 @@ shoot={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
