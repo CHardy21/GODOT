@@ -23,3 +23,12 @@ Tomando como punto de partida el enemigo "pinchon" hecho en clases, le hice algu
 
 Observaciones sobre la implementacion de la mecanica Intermedia:
 ===============================================================
+Se inicia creando una variable global en el personaje player donde indicamos si pueda o no disparar, para este trabajo la ponemos en true
+de entrada, aunq podriamos crear un item q al consumirlo recien pueda disparar el personaje.
+en una funcion _input capturamos el cuando se presiona la tecla para disprar, tecla shoot en este trabajo.
+Al presionar la tecla shoot la func input llama a la funcion shoot_control que verifica si el pj puede disparar y crea una instancia de
+proyectil, le asignamos una direccion en base al atributo flip_h del personaje y una posicion de disparo para la que se utiliza un nodo position2d q anteriormente agregamos al pj.
+cambiamos a false la variable puede_disparar y lanzamos el timer de enfriamiento de disparo que al finalizar vuelve a true la var anterior.
+el proyectil es un area2d que al impactar con enemigo se destruye, pera ello utilizamos un señal que detecta cuando el proyectil 
+colisiona con algun elemento del grupo Enemy (ya sean cuerpos fisicos u areas).
+Se agrega en cada enemigo una nueva señal para detectar la colision del proyectil e inicia su anamicion morir y luego se elimina el nodo del arbol de escenas.
