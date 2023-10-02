@@ -14,6 +14,7 @@
 
 [node name="Nivel-03" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-03.tscn"
+nivel_name = "Nivel 3"
 
 [node name="PlataformaCesped" parent="Plataformas/PlataformasCortas" index="0" instance=ExtResource( 7 )]
 position = Vector2( 172.246, 687.317 )

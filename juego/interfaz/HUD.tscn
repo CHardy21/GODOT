@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://juego/interfaz/ContenedorLlaves.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/interfaz/ContenedorVidas.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://juego/interfaz/ContenedorMonedasPlata.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/interfaz/ContenedorMonedasBronce.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/interfaz/HUD.gd" type="Script" id=6]
+[ext_resource path="res://juego/interfaz/ContenedorNiveles.tscn" type="PackedScene" id=7]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
@@ -14,7 +15,7 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 37.7289, 152.151 ],
 "_edit_use_anchors_": false,
-"_edit_vertical_guides_": [ 1102.82 ]
+"_edit_vertical_guides_": [ 1102.82, 49.8966 ]
 }
 
 [node name="ContenedorVidas" parent="." instance=ExtResource( 2 )]
@@ -28,6 +29,12 @@ margin_left = 47.8325
 margin_top = 106.162
 margin_right = 219.832
 margin_bottom = 150.162
+
+[node name="ContenedorNiveles" parent="." instance=ExtResource( 7 )]
+margin_left = 48.1001
+margin_top = 164.217
+margin_right = 220.1
+margin_bottom = 208.217
 
 [node name="ContenedorMonedasOro" parent="." instance=ExtResource( 3 )]
 margin_left = 1103.52

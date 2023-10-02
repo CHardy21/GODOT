@@ -19,3 +19,4 @@ func actualizar_hud():
 	etiqueta_monedad_plata.text = "%s" % DatosPlayers.monedas_plata
 	etiqueta_monedas_bronce.text = "%s" % DatosPlayers.monedas_bronce
 	etiqueta_llaves.text = "%s" % DatosPlayers.llaves
+	$ContenedorNiveles/Cantidad.text = "%s" % DatosPlayers.nivel_name

@@ -9,6 +9,7 @@ var monedas_oro = 0
 var monedas_plata = 0
 var monedas_bronce = 0
 var nivel_actual = ""
+var nivel_name = ""
 var puntaje = 0
 
 func reset():

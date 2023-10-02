@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
-[ext_resource path="res://juego/plataformas/PlataformaArena.tscn" type="PackedScene" id=3]
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=4]
 [ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=6]
@@ -108,7 +107,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 23 )
 
 [node name="PersonajePpal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1210.01, 321.565 )
+position = Vector2( 141.426, 34.2148 )
 velocidad = Vector2( 350, 800 )
 
 [node name="Plataformas" type="Node" parent="."]
@@ -128,7 +127,7 @@ collision_layer = 5
 collision_mask = 1
 
 [node name="Plataforma4" parent="Plataformas" instance=ExtResource( 2 )]
-position = Vector2( -100.789, 390.617 )
+position = Vector2( 6.96741, 71.8377 )
 scale = Vector2( 2, 0.3 )
 z_index = 50
 collision_layer = 5
@@ -191,13 +190,6 @@ z_index = 30
 collision_layer = 5
 collision_mask = 1
 
-[node name="Plataforma2" parent="Plataformas" instance=ExtResource( 3 )]
-position = Vector2( -24.4822, 41.6129 )
-z_index = 0
-z_as_relative = true
-collision_layer = 5
-collision_mask = 1
-
 [node name="Plataforma" parent="Plataformas" instance=ExtResource( 2 )]
 position = Vector2( 522.494, -210.743 )
 z_index = 0
@@ -232,7 +224,7 @@ position = Vector2( 1764.62, 334.575 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Nubon" parent="Enemigos" instance=ExtResource( 8 )]
-position = Vector2( 16.0181, -77.4207 )
+position = Vector2( 2400.13, -382.73 )
 
 [node name="Sierrin" parent="Enemigos" instance=ExtResource( 24 )]
 position = Vector2( 1487.24, 109.734 )

@@ -16,6 +16,7 @@
 
 [node name="Nivel-04" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-04.tscn"
+nivel_name = "Nivel 4"
 
 [node name="PlataformaPiedra" parent="Plataformas/PlataformasCortas" index="0" instance=ExtResource( 2 )]
 position = Vector2( 1016.61, 344.013 )
@@ -90,6 +91,7 @@ position = Vector2( 235.463, 259.247 )
 
 [node name="Pinchon" parent="Enemigos" index="6" instance=ExtResource( 13 )]
 position = Vector2( 649.662, 650.708 )
+scale = Vector2( 0.9, 0.9 )
 radio_mov_x = 250
 
 [node name="Pinchos" parent="ObjetosDaño" index="0" instance=ExtResource( 5 )]

@@ -19,6 +19,7 @@
 
 [node name="Nivel-05" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-05.tscn"
+nivel_name = "Nivel 5"
 
 [node name="HUD" parent="CapaFrente" index="0"]
 margin_top = -2.37842

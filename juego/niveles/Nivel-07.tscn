@@ -20,6 +20,7 @@
 
 [node name="Nivel-07" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-07.tscn"
+nivel_name = "Nivel 7"
 
 [node name="Decorados" type="Node" parent="." index="2"]
 

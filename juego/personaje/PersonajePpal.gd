@@ -60,16 +60,19 @@ func tomar_direccion():
 		direccion = Input.get_action_strength("mov_derecha") - Input.get_action_strength("mov_izquierda")
 		if direccion == 0:
 			animacion.play("default")
+			$Particles.emitting = false
 		else:
 			if direccion < 0:
 				animacion.flip_h = true
 			else:
 				animacion.flip_h = false
 			animacion.play("correr")
+			$Particles.emitting = true
 	return direccion
 	
 func caer():
 	if not is_on_floor():
+		$Particles.emitting = false
 		animacion.play("saltar")
 		movimiento.y += acel_caida
 		movimiento.y = clamp(movimiento.y, impulso, velocidad.y)

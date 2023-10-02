@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=2]
@@ -17,10 +17,10 @@
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=15]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://juego/enemigos/Sierrin.tscn" type="PackedScene" id=17]
-[ext_resource path="res://juego/objetos/PlataformaTrampa.gd" type="Script" id=18]
 
 [node name="Nivel-08" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-08.tscn"
+nivel_name = "Nivel 8"
 
 [node name="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas" index="0"]
 margin_top = 5.15906
@@ -166,16 +166,9 @@ texture = ExtResource( 14 )
 visible = false
 polygon = PoolVector2Array( -156.706, -46.3642, 177.461, -45.7696, 185.785, -42.202, 188.164, -36.8505, 189.947, -30.9045, 189.947, -16.0394, 163.19, 29.7451, 157.839, 34.5019, 154.271, 35.0965, -159.679, 46.9886, -163.247, 45.7994, -189.41, -13.661, -190.004, -33.2829, -185.842, -41.0127, -177.518, -45.7696 )
 
-[node name="PlataformaMediaPiedra" type="StaticBody2D" parent="Plataformas/PlataformasMedianas" index="7" instance=ExtResource( 13 )]
+[node name="PlataformaMediaPiedra" parent="Plataformas/PlataformasMedianas" index="7" instance=ExtResource( 13 )]
 position = Vector2( 4014.25, 383.523 )
 scale = Vector2( 1.5, 0.3 )
-z_index = 40
-z_as_relative = false
-collision_layer = 4
-collision_mask = 10
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="PlataformaMediaPiedra3" parent="Plataformas/PlataformasMedianas" index="8" instance=ExtResource( 13 )]
 position = Vector2( 3607.92, 500.991 )
@@ -185,16 +178,9 @@ scale = Vector2( 0.8, 0.3 )
 position = Vector2( 4297.57, 259.523 )
 scale = Vector2( 1.5, 0.3 )
 
-[node name="PlataformaLargaPiedra" type="StaticBody2D" parent="Plataformas/PlataformasLargas" index="0" instance=ExtResource( 13 )]
+[node name="PlataformaLargaPiedra" parent="Plataformas/PlataformasLargas" index="0" instance=ExtResource( 13 )]
 position = Vector2( 1122.92, 755.733 )
 scale = Vector2( 2.5, 0.4 )
-z_index = 40
-z_as_relative = false
-collision_layer = 4
-collision_mask = 10
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="PlataformaLargaPiedra2" parent="Plataformas/PlataformasLargas" index="1" instance=ExtResource( 13 )]
 position = Vector2( 2186.09, 263.802 )
@@ -216,14 +202,9 @@ scale = Vector2( 0.4, 0.4 )
 position = Vector2( 4274.93, 246.278 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="PlataformaTrampa" type="StaticBody2D" parent="Plataformas" index="8" instance=ExtResource( 16 )]
+[node name="PlataformaTrampa" parent="Plataformas" index="8" instance=ExtResource( 16 )]
 position = Vector2( 2757.67, 188.345 )
 scale = Vector2( 0.7, 0.45 )
-z_index = 40
-z_as_relative = false
-collision_layer = 4
-collision_mask = 10
-script = ExtResource( 18 )
 
 [node name="PlataformaTrampa2" parent="Plataformas" index="9" instance=ExtResource( 16 )]
 position = Vector2( 2901.14, 189.289 )

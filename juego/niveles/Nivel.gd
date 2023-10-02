@@ -4,6 +4,7 @@ extends Node
 
 export var menu_game_over = "res://juego/menu/MenuGameOver.tscn"
 export var nivel_actual = ""
+export var nivel_name = ""
 
 var numero_llaves = 0
 var contenedor_llaves
@@ -15,7 +16,7 @@ func _ready():
 # warning-ignore:return_value_discarded
 	DatosPlayers.connect("game_over", self, "game_over")
 	contenedor_llaves = get_node_or_null("Zanahorias")
-	# print(contenedor_llaves.name)
+	DatosPlayers.nivel_name = nivel_name
 	if contenedor_llaves != null:
 		numero_llaves_nivel()
 		
