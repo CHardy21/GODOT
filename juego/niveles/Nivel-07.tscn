@@ -94,11 +94,15 @@ scale = Vector2( 0.8, 0.3 )
 position = Vector2( 4306.85, 340.322 )
 scale = Vector2( 0.8, 0.3 )
 
-[node name="PlataformaCortaCesped8" parent="Plataformas/PlataformasCortas" index="7" instance=ExtResource( 12 )]
+[node name="PlataformaCortaCesped10" parent="Plataformas/PlataformasCortas" index="7" instance=ExtResource( 12 )]
+position = Vector2( 4658.85, 461.621 )
+scale = Vector2( 0.8, 0.3 )
+
+[node name="PlataformaCortaCesped8" parent="Plataformas/PlataformasCortas" index="8" instance=ExtResource( 12 )]
 position = Vector2( 3636.88, 473.518 )
 scale = Vector2( 0.8, 0.3 )
 
-[node name="PlataformaCortaCesped9" parent="Plataformas/PlataformasCortas" index="8" instance=ExtResource( 12 )]
+[node name="PlataformaCortaCesped9" parent="Plataformas/PlataformasCortas" index="9" instance=ExtResource( 12 )]
 position = Vector2( 1683.09, 443.551 )
 scale = Vector2( 0.8, 0.3 )
 
@@ -213,7 +217,7 @@ position = Vector2( 881.693, -248.969 )
 position = Vector2( 2329.06, -230.989 )
 
 [node name="ZanahoriaLlave3" parent="Zanahorias" index="2" instance=ExtResource( 9 )]
-position = Vector2( 4980.02, 562.712 )
+position = Vector2( 4956.61, 562.39 )
 
 [node name="ZanahoriaLlave4" parent="Zanahorias" index="3" instance=ExtResource( 9 )]
 position = Vector2( 3365.5, 535.803 )
@@ -271,6 +275,15 @@ position = Vector2( 529.132, -248.838 )
 
 [node name="MonedaBronce3" parent="Monedas" index="16" instance=ExtResource( 6 )]
 position = Vector2( 4350.17, 200.2 )
+
+[node name="MonedaBronce5" parent="Monedas" index="17" instance=ExtResource( 6 )]
+position = Vector2( 4521.42, 262.039 )
+
+[node name="MonedaBronce6" parent="Monedas" index="18" instance=ExtResource( 6 )]
+position = Vector2( 4595.15, 319.121 )
+
+[node name="MonedaBronce4" parent="Monedas" index="19" instance=ExtResource( 6 )]
+position = Vector2( 4478.6, 83.6577 )
 
 [node name="Portal" parent="." index="9"]
 position = Vector2( 1593.62, 374.406 )

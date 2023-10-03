@@ -26,7 +26,7 @@ func _on_DetectaJugador_body_entered(body):
 
 # funcion que detecta el impacto de un proyectil.
 func _on_area_entered(_area):
-	desactivar_colisionadores([$DetectaJugador/CollisionShape2D, $ColisionPies ])
+	desactivar_colisionadores([$DetectaJugador/CollisionShape2D, $ColisionPies, $DetectaJugador/CollisionPolygon2D ])
 	morir()
 
 

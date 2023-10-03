@@ -1,15 +1,13 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/objetos/Pinchos_v2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=4]
 [ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=8]
-[ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=10]
-[ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
 [ext_resource path="res://recursos/Background/bg_layer2.png" type="Texture" id=13]
 [ext_resource path="res://recursos/Background/bg_layer4.png" type="Texture" id=14]
@@ -107,7 +105,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 23 )
 
 [node name="PersonajePpal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 141.426, 34.2148 )
+position = Vector2( 679.633, 377.481 )
 velocidad = Vector2( 350, 800 )
 
 [node name="Plataformas" type="Node" parent="."]
@@ -141,7 +139,7 @@ collision_layer = 5
 collision_mask = 1
 
 [node name="Plataforma3" parent="Plataformas" instance=ExtResource( 2 )]
-position = Vector2( 920.692, 241.314 )
+position = Vector2( 943.637, -16.156 )
 scale = Vector2( 0.999999, 0.3 )
 z_index = 0
 z_as_relative = true
@@ -208,14 +206,10 @@ gravity_point = true
 collision_layer = 32
 es_trampa = true
 
-[node name="Pinchos" parent="ObjetosDaño" instance=ExtResource( 5 )]
-position = Vector2( 925.199, 226.144 )
-collision_layer = 32
-
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="Pinchon" parent="Enemigos" instance=ExtResource( 6 )]
-position = Vector2( 741.699, 372.416 )
+position = Vector2( 684.488, 105.431 )
 scale = Vector2( 1, 1 )
 radio_mov_x = 200
 
@@ -242,18 +236,6 @@ position = Vector2( 1456.26, 319.614 )
 
 [node name="Monedas" type="Node" parent="."]
 
-[node name="MonedaOro" parent="Monedas" instance=ExtResource( 9 )]
-position = Vector2( 702.084, 327.48 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="MonedaPlata" parent="Monedas" instance=ExtResource( 10 )]
-position = Vector2( 667.084, 275.275 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="MonedaBronce" parent="Monedas" instance=ExtResource( 11 )]
-position = Vector2( 632.084, 327.48 )
-scale = Vector2( 0.5, 0.5 )
-
 [node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 2141.94, 299.68 )
 proximo_nivel = "res://juego/menu/MenuVictoria.tscn"
@@ -261,3 +243,7 @@ proximo_nivel = "res://juego/menu/MenuVictoria.tscn"
 [node name="Plataforma" parent="." instance=ExtResource( 25 )]
 position = Vector2( 1207.35, 329.644 )
 scale = Vector2( 0.3, 0.2 )
+
+[node name="Pinchos_v2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 862.296, -3.1989 )
+es_trampa = true

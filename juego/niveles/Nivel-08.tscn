@@ -355,4 +355,4 @@ position = Vector2( -321, 178 )
 position = Vector2( 2940.73, 460.619 )
 
 [node name="PersonajePpal" parent="." index="9" instance=ExtResource( 7 )]
-position = Vector2( 1810.04, 247.08 )
+position = Vector2( -178.346, 841.737 )
