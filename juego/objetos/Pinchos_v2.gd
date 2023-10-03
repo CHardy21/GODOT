@@ -8,6 +8,7 @@ var velocidad = Vector2(400.0,900.0)
 var caida = false
 
 onready var detector_personaje = $DetectorPersonaje
+onready var detector_colision = $DetectorColision/Colisionador
 
 
 func _ready():
@@ -15,11 +16,13 @@ func _ready():
 		$Sprite.modulate = color_trampa
 		detector_personaje.enabled = true
 		rotation_degrees = 180
+		detector_colision.set_deferred("enabled", false)
 		
 
 func _process(_delta):
 	if detector_personaje.is_colliding():
 		detector_personaje.set_deferred("enabled",false)
+		detector_colision.set_deferred("enabled", true)
 		$AnimationPlayer.play("caer")
 		
 	if caida:

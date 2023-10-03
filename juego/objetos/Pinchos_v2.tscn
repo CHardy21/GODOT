@@ -113,6 +113,11 @@ collision_layer = 32
 collision_mask = 6
 script = ExtResource( 3 )
 
+[node name="Colisionador2" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -25.8563, -6.66798, -18.3711, -38.9176, 18.0449, -38.9176, 25.4964, -6.38737 )
+disabled = true
+
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.70902, 0.141176, 0.141176, 1 )
 position = Vector2( 0, -22 )
@@ -124,7 +129,7 @@ collision_layer = 32
 collision_mask = 6
 
 [node name="Colisionador" type="CollisionPolygon2D" parent="DetectorColision"]
-polygon = PoolVector2Array( -27.0332, -1.26417, -18.3711, -38.9176, 18.0449, -38.9176, 26.3534, -0.733841 )
+polygon = PoolVector2Array( -25.8563, -6.66798, -18.3711, -38.9176, 18.0449, -38.9176, 25.4964, -6.38737 )
 
 [node name="DetectorPersonaje" type="RayCast2D" parent="."]
 cast_to = Vector2( 0, -500 )

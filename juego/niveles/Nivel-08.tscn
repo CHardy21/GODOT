@@ -10,13 +10,15 @@
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=10]
-[ext_resource path="res://_plataformas/PlataformaMadera.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/plataformas/PlataformaMadera.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/plataformas/PlataformaPiedra.tscn" type="PackedScene" id=13]
 [ext_resource path="res://recursos/Environment/ground_stone.png" type="Texture" id=14]
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=15]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://juego/enemigos/Sierrin.tscn" type="PackedScene" id=17]
+
+
 
 [node name="Nivel-08" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-08.tscn"

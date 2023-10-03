@@ -4,7 +4,7 @@
 [ext_resource path="res://juego/plataformas/PlataformaPiedra.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/objetos/Pinchos_v2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=8]
@@ -93,8 +93,9 @@ position = Vector2( 235.463, 259.247 )
 position = Vector2( 649.662, 650.708 )
 radio_mov_x = 250
 
-[node name="Pinchos" parent="ObjetosDaño" index="0" instance=ExtResource( 5 )]
-position = Vector2( 919.786, 357.187 )
+[node name="Pinchos_v2" parent="ObjetosDaño" index="0" instance=ExtResource( 5 )]
+position = Vector2( 920.297, 355.433 )
+scale = Vector2( 0.8, 0.8 )
 es_trampa = true
 
 [node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 3 )]
