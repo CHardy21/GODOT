@@ -11,6 +11,7 @@ var monedas_bronce = 0
 var nivel_actual = ""
 var nivel_name = ""
 var puntaje = 0
+var player_selected = "player1"
 
 func reset():
 	vidas = 3

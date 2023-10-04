@@ -13,17 +13,26 @@ var acel_caida_original
 var puede_moverse = true
 var puede_disparar = true
 
-onready var animacion = $AnimatedSprite
+
 onready var audio_salto = $AudioSaltar
 onready var camara = $Camera2D
 onready var enfriamiento_power_up = $EnfriamientoPowerUpSalto
 onready var enfriamiento_power_up_volar = $EnfriamientoPowerUpVolar
 onready var enfriamiento_disparo = $EnfriamientoDisparo
 onready var animacion_personaje = $AnimationPlayer
-
+onready var player_selected = DatosPlayers.player_selected
+#onready var animacion = ""
+onready var animacion = $AnimatedSprite
 
 
 func _ready():
+	if player_selected == "player2":
+		animacion = $AnimatedSprite2
+		$AnimatedSprite.queue_free()
+	else:
+		animacion = $AnimatedSprite
+		$AnimatedSprite2.queue_free()
+	
 	animacion_personaje.play("aclarar")
 	fuerza_salto_original = fuerza_salto
 	acel_caida_original = acel_caida
@@ -121,7 +130,10 @@ func volar():
 
 func play_entrar_portal(posicion_portal):
 	puede_moverse = false
-	animacion_personaje.play("entrar_portal")
+	if player_selected == "player1":
+		animacion_personaje.play("entrar_portal")
+	else:
+		animacion_personaje.play("entrar_portal_2")
 	$Tween.interpolate_property(
 		self,
 		"global_position",

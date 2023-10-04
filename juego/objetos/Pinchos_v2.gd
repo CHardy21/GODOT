@@ -26,6 +26,7 @@ func _process(_delta):
 		
 	if caida:
 		movimiento.y = velocidad.y
+# warning-ignore:return_value_discarded
 		move_and_slide(movimiento, Vector2.UP)
 
 func _on_DetectorColision_body_entered(body):
