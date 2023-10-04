@@ -245,5 +245,5 @@ position = Vector2( 1207.35, 329.644 )
 scale = Vector2( 0.3, 0.2 )
 
 [node name="Pinchos_v2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 862.296, -3.1989 )
+position = Vector2( 861.796, 30.2452 )
 es_trampa = true

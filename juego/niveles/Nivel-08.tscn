@@ -4,7 +4,7 @@
 [ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=4]
-[ext_resource path="res://juego/plataformas/PlataformaMadera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/objetos/Pinchos_v2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/personaje/PersonajePpal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=8]
@@ -17,8 +17,6 @@
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=15]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://juego/enemigos/Sierrin.tscn" type="PackedScene" id=17]
-
-
 
 [node name="Nivel-08" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-08.tscn"
@@ -38,7 +36,7 @@ position = Vector2( 280.602, 853.518 )
 [node name="PlataformaMadera2" parent="Plataformas" index="1" instance=ExtResource( 11 )]
 position = Vector2( 570.198, 826.579 )
 
-[node name="PlataformaCortaMadera" parent="Plataformas/PlataformasCortas" index="0" instance=ExtResource( 5 )]
+[node name="PlataformaCortaMadera" parent="Plataformas/PlataformasCortas" index="0" instance=ExtResource( 11 )]
 position = Vector2( -103.16, 853.884 )
 scale = Vector2( 0.8, 0.3 )
 
@@ -259,27 +257,26 @@ position = Vector2( 783.601, 736.484 )
 [node name="Pinchos2" parent="ObjetosDaño" index="1" instance=ExtResource( 12 )]
 position = Vector2( 1077.98, 736.691 )
 
-[node name="Pinchos4" parent="ObjetosDaño" index="2" instance=ExtResource( 12 )]
-position = Vector2( 1518.95, 403.693 )
-es_trampa = true
-
-[node name="Pinchos5" parent="ObjetosDaño" index="3" instance=ExtResource( 12 )]
+[node name="Pinchos5" parent="ObjetosDaño" index="2" instance=ExtResource( 12 )]
 position = Vector2( 3982.95, 137.693 )
 
-[node name="Pinchos6" parent="ObjetosDaño" index="4" instance=ExtResource( 12 )]
+[node name="Pinchos6" parent="ObjetosDaño" index="3" instance=ExtResource( 12 )]
 position = Vector2( 3972.86, 154.511 )
 es_trampa = true
 
-[node name="Pinchos7" parent="ObjetosDaño" index="5" instance=ExtResource( 12 )]
+[node name="Pinchos7" parent="ObjetosDaño" index="4" instance=ExtResource( 12 )]
 position = Vector2( 3920.72, 152.829 )
 es_trampa = true
 
-[node name="Pinchos8" parent="ObjetosDaño" index="6" instance=ExtResource( 12 )]
+[node name="Pinchos8" parent="ObjetosDaño" index="5" instance=ExtResource( 12 )]
 position = Vector2( 3821.5, 157.874 )
 es_trampa = true
 
-[node name="Pinchos3" parent="ObjetosDaño" index="7" instance=ExtResource( 12 )]
+[node name="Pinchos3" parent="ObjetosDaño" index="6" instance=ExtResource( 12 )]
 position = Vector2( 937.027, 735.691 )
+
+[node name="Pinchos_v2" parent="ObjetosDaño" index="7" instance=ExtResource( 5 )]
+position = Vector2( 1585.69, 434.815 )
 
 [node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 4 )]
 position = Vector2( 570.846, 762.511 )

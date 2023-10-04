@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaArena.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/objetos/Pinchos_v2.tscn" type="PackedScene" id=12]
 
 [node name="Nivel-03" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-03.tscn"
@@ -58,6 +59,10 @@ texture = ExtResource( 5 )
 
 [node name="Volon" parent="Enemigos" index="2" instance=ExtResource( 11 )]
 position = Vector2( 1011.41, 477.916 )
+
+[node name="Pinchos_v2" parent="ObjetosDaño" index="0" instance=ExtResource( 12 )]
+position = Vector2( 1442.04, 341.169 )
+es_trampa = true
 
 [node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 3 )]
 position = Vector2( 2083.08, 371.682 )

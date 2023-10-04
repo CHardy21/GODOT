@@ -94,8 +94,7 @@ position = Vector2( 649.662, 650.708 )
 radio_mov_x = 250
 
 [node name="Pinchos_v2" parent="ObjetosDaño" index="0" instance=ExtResource( 5 )]
-position = Vector2( 920.297, 355.433 )
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 920.297, 389.734 )
 es_trampa = true
 
 [node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 3 )]

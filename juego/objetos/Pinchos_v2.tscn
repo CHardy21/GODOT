@@ -109,9 +109,14 @@ tracks/2/keys = {
 }
 
 [node name="Pinchos_v2" type="KinematicBody2D"]
+scale = Vector2( 0.8, 0.8 )
 collision_layer = 32
 collision_mask = 6
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -36.3306 ]
+}
+es_trampa = true
 
 [node name="Colisionador2" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -121,6 +126,7 @@ disabled = true
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.70902, 0.141176, 0.141176, 1 )
 position = Vector2( 0, -22 )
+rotation = 3.14159
 scale = Vector2( 0.6, 0.8 )
 texture = ExtResource( 1 )
 
@@ -129,10 +135,12 @@ collision_layer = 32
 collision_mask = 6
 
 [node name="Colisionador" type="CollisionPolygon2D" parent="DetectorColision"]
-polygon = PoolVector2Array( -25.8563, -6.66798, -18.3711, -38.9176, 18.0449, -38.9176, 25.4964, -6.38737 )
+position = Vector2( -0.216187, -44.0007 )
+rotation = 3.14159
+polygon = PoolVector2Array( -24.6297, -7.48275, -18.3711, -38.9176, 18.0449, -38.9176, 23.3161, -7.48276 )
 
 [node name="DetectorPersonaje" type="RayCast2D" parent="."]
-cast_to = Vector2( 0, -500 )
+cast_to = Vector2( 0, 500 )
 collision_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -145,6 +153,7 @@ anims/destruirse = SubResource( 3 )
 stream = ExtResource( 2 )
 
 [node name="ParticlesImpactoPlataforma" type="CPUParticles2D" parent="."]
+position = Vector2( 0, -35 )
 emitting = false
 amount = 6
 lifetime = 0.5

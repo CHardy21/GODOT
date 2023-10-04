@@ -15,7 +15,7 @@
 [ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=13]
 [ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=14]
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=15]
-[ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=17]
+[ext_resource path="res://juego/objetos/Pinchos_v2.tscn" type="PackedScene" id=16]
 
 [node name="Nivel-05" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel-05.tscn"
@@ -106,9 +106,8 @@ radio_mov_x = 500
 position = Vector2( 1328.24, 412.554 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Pinchos" parent="ObjetosDaño" index="1" instance=ExtResource( 17 )]
-position = Vector2( 0, -24 )
-es_trampa = true
+[node name="Pinchos_v2" parent="ObjetosDaño" index="1" instance=ExtResource( 16 )]
+position = Vector2( -44.9492, 8.78728 )
 
 [node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 8 )]
 position = Vector2( 1331.75, 351.058 )

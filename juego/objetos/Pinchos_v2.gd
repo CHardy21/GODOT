@@ -15,7 +15,6 @@ func _ready():
 	if es_trampa:
 		$Sprite.modulate = color_trampa
 		detector_personaje.enabled = true
-		rotation_degrees = 180
 		detector_colision.set_deferred("enabled", false)
 		
 
